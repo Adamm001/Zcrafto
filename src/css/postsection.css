@@ -1,0 +1,42 @@
+
+.postSection{
+    padding: 10px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: solid 1px black;
+    height: auto;
+    width: 1145px;
+    transform: translate(200px, 60px);
+  }
+  .postBox{
+    padding: 10px 10px;
+    height: 480px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 10px black;   
+  }
+  .postBoxProName{
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .postBoxPro{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+  }
+  .postBoxImage{
+    border-radius: 10px;
+    height: 360px;
+    width: 360px;
+  }
+  .postLike{
+    height: 25px;
+  }
