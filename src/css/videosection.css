@@ -1,0 +1,95 @@
+
+/* CATEGORY SECTION */
+.categorySection {
+    margin-left: 202px;
+    z-index: 1;
+    position: fixed;
+    top: 62px;
+    width: 1145px;
+    background-color: #fff;
+    height: 50px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    gap: 10px;
+    border: solid 2px #1B1713;
+}
+
+.categoryButton {
+    height: 34px;
+    border-radius: 13px;
+    border: none;
+    padding: 0 15px;
+    background-color: #644C3C;
+    color: #fff;
+}
+
+
+/* video section */
+
+.section {
+    z-index: 0;
+    padding: 5px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    flex-direction: column;
+    height: auto;
+    width: 1145px;
+    transform: translate(200px, 110px);
+}
+
+.videoSection {
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.videoBox {
+    padding: 5px;
+    height: auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.videoBoxProName {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    gap: 10px;
+}
+
+.videoBoxPro {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.videoBoxImage {
+    border-radius: 10px;
+    height: 228px;
+    width: 390px;
+}
+
+.videoBoxText {
+    width: 100%;
+}
+.videoBoxDescription{
+    max-height: 40px;
+    text-overflow: ellipsis;
+}
+.videoBoxName{
+    font-size: 13px;
+    color: #575757;
+    font-weight: bold;
+}

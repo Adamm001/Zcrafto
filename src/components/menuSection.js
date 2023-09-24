@@ -5,7 +5,7 @@ import videoLogo from "C:/Users/moko/OneDrive - mk.edu.mn/Documents/Procon/Zcraf
 import chatLogo from "C:/Users/moko/OneDrive - mk.edu.mn/Documents/Procon/Zcrafto/src/icons/chat_icon.svg";
 export default function Menusection() {
   const menuList = ["Home", "video", "shop", "profile", "messenger"];
-  const menuIcon = [menuLogo, proLogo, shopLogo, videoLogo, chatLogo];
+  const menuIcon = [menuLogo, videoLogo, shopLogo, proLogo, chatLogo];
   return (
     <div className="menuSection">
       {menuList.map((menuName, index) => (

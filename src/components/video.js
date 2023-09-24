@@ -1,22 +1,25 @@
-import heartIcon from "C:/Users/moko/OneDrive - mk.edu.mn/Documents/Procon/Zcrafto/src/icons/like_Icon.svg"
-import postImage from "C:/Users/moko/OneDrive - mk.edu.mn/Documents/Procon/Zcrafto/src/icons/Discord - A New Way to Chat with Friends & Communities.jpeg"
+import heartIcon from "C:/Users/moko/OneDrive - mk.edu.mn/Documents/Procon/Zcrafto/src/icons/like_Icon.svg";
+import videoImage from "C:/Users/moko/OneDrive - mk.edu.mn/Documents/Procon/Zcrafto/src/icons/Discord - A New Way to Chat with Friends & Communities.jpeg";
 const ProName = () => {
-    return(
-        <div className="postBoxProName">
-            <img src={postImage} alt="Pro Image" className="postBoxPro"/>
-            <span className="postBoxName">Name</span>
-        </div>
-    )
-}
-const Post = () => {
-    return ( 
-        <div className="postBox">
-            <ProName/>
-            <img src={postImage} alt="zurag" className="postBoxImage"/>
-            <p>Description</p>
-            <img className="postLike" src={heartIcon} />
-        </div>
-     );
-}
- 
-export default Post;
+  return (
+    <div className="videoBoxProName">
+      <img src={videoImage} alt="Pro Image" className="videoBoxPro" />
+      <div className="videoBoxText">
+        <p className="videoBoxDescription">
+          Description
+        </p>
+        <p className="videoBoxName">Name</p>
+      </div>
+    </div>
+  );
+};
+const Video = () => {
+  return (
+    <div className="videoBox">
+      <img src={videoImage} alt="zurag" className="videoBoxImage" />
+      <ProName />
+    </div>
+  );
+};
+
+export default Video;

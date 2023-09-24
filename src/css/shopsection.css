@@ -1,0 +1,47 @@
+.shopSection {
+    z-index: 0;
+    padding: 10px;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: auto;
+    width: 1145px;
+    transform: translate(200px, 110px);
+}
+
+/* shop box */
+.shopBox {
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 10px black;
+    border-radius: 15px;
+}
+
+.shopBoxImage {
+    width: 280px;
+    height: 220px;
+    border-radius: 10px;
+}
+
+.shopBoxPro {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.shopBoxAbout {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.shopBoxPrice {
+    font-size: 20px;
+}
