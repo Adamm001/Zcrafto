@@ -13,7 +13,7 @@ const Post = () => {
         <div className="postBox">
             <ProName/>
             <img src={postImage} alt="zurag" className="postBoxImage"/>
-            <p>Description</p>
+            <p className="postBoxDescription">Description</p>
             <img className="postLike" src={heartIcon} />
         </div>
      );

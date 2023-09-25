@@ -1,0 +1,79 @@
+/* InstagramProfile.css */
+.profile-container {
+    transform: translate(200px, 60px);
+    width: 400px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    border: 1px solid black;
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .profile-info {
+    flex-grow: 1;
+  }
+  
+  .profile-info h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .profile-info p {
+    color: gray;
+    margin: 0;
+  }
+  
+  .follow-button {
+    background-color: #3897f0;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .profile-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 0;
+  }
+  
+  .profile-stats div {
+    text-align: center;
+  }
+  
+  .profile-stats strong {
+    font-size: 18px;
+  }
+  
+  .profile-posts {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  /* Add more styling as needed */
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .profile-posts {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
