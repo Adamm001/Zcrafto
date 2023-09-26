@@ -1,79 +1,147 @@
 /* InstagramProfile.css */
+.profile {
+  position: fixed;
+  transform: translate(200px, 60px);
+  width: 400px;
+  height: 575px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  border-radius: 10px;
+}
+
 .profile-container {
-    transform: translate(200px, 60px);
-    width: 400px;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    border: 1px solid black;
-  }
+  width: 380px;
+  padding: 20px;
+  margin: 10px;
+  font-family: Arial, sans-serif;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: #e1d7c4;
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.profile-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.profile-info h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.follow-button {
+  background-color: #644C3C;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  width: 100px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  border-radius: 5px;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 0;
+}
+
+.profile-stats div {
+  text-align: center;
+}
+
+.profile-stats strong {
+  font-size: 18px;
+}
+
+.profile-posts {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.profileCategory {
+  border: 1px solid black;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  justify-content: space-around;
+  margin: 10px;
+  background-color: #e1d7c4;
+  border-radius: 15px;
+  box-shadow: 10px 10px 3px rgba(0, 0, 0, 0.5) inset;
+}
+.profileCategory a{
+  height: 60px;
+  background-color: #644C3C;
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: 10px 10px 3px rgba(0, 0, 0, 0.5);
+}
+
+.profileCategory a:hover{
+  background-color: #32261e;
+}
+.profileCategory a.active{
   
-  .profile-header {
-    display: flex;
-    align-items: center;
-  }
-  
-  .profile-picture {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-right: 20px;
-  }
-  
-  .profile-info {
-    flex-grow: 1;
-  }
-  
-  .profile-info h1 {
-    font-size: 24px;
-    margin: 0;
-  }
-  
-  .profile-info p {
-    color: gray;
-    margin: 0;
-  }
-  
-  .follow-button {
-    background-color: #3897f0;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    outline: none;
-  }
-  
-  .profile-stats {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    border-top: 1px solid #e0e0e0;
-    border-bottom: 1px solid #e0e0e0;
-    padding: 10px 0;
-  }
-  
-  .profile-stats div {
-    text-align: center;
-  }
-  
-  .profile-stats strong {
-    font-size: 18px;
-  }
-  
-  .profile-posts {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-  }
-  
-  /* Add more styling as needed */
-  
-  /* Media query for responsiveness */
-  @media (max-width: 768px) {
-    .profile-posts {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
+  background-color: #32261e;
+}
+
+.profileVideo{
+  transform: translate(610px, 58px);
+  width: 735px;
+  height: auto;
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
+  row-gap: 20px;
+  flex-wrap: wrap;
+  background-color: #e8d4c4;
+  box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.3) inset;
+}
+.profileVideo img{
+  width: 330px;
+  height: 185px;
+  border-radius: 10px;
+  transition: 0.5s;
+  box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.3);
+}
+.profileVideo img:hover{
+  transform: scale(1.1);
+  filter: brightness(0.5) saturate(0.3) contrast(1.05) blur(5px);
+  box-shadow: none;
+}

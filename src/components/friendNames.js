@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
+import proImage from "../icons/post.jpeg"
 
 function FriendsList(params) {
     const names = ['Alex','Adam','Rose','Jake','Daniel']
@@ -7,7 +8,7 @@ function FriendsList(params) {
         <div className="chatContainer">
         <div className="friendList">
             {names.map((fname, index) =>(
-                <NavLink to={toFriend[index]}>{fname}</NavLink>
+                <NavLink to={toFriend[index]}><img src={proImage}/> {fname}</NavLink>
             ))}
         </div>
         <Outlet/>

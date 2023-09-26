@@ -14,6 +14,9 @@ import Message1 from "./components/message/message1";
 import Message2 from "./components/message/message2";
 import Message3 from "./components/message/message3";
 import Message4 from "./components/message/message4";
+import VideoCategory from "./components/videoCategory";
+import PostCategory from "./components/postCategory";
+import ShopCategory from "./components/shopCategory";
 
 function App() {
   return (
@@ -27,7 +30,11 @@ function App() {
           <Route path="video" element={<VideoSection />}></Route>
           <Route path="shop" element={<ShopSection />}></Route>
         </Route>
-        <Route path="profile" element={<Profile />}></Route>
+        <Route path="profile" element={<Profile />}>
+          <Route path="post" element={<PostCategory/>}/>
+          <Route path="video" element={<VideoCategory/>}/>
+          <Route path="shop" element={<ShopCategory/>}/>
+        </Route>
         <Route path="chat" element={<FriendsList />}>
           <Route path="0" element={<Message/>} />
           <Route path="1" element={<Message1/>} />

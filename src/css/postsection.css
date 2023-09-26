@@ -14,13 +14,13 @@
     background-color: #e1d7c4;
     border-radius: 10px;
     padding: 10px 10px;
-    height: 480px;
+    height: 490px;
     width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) inset;
 }
 .postBoxName{
     font-weight: bold;
@@ -39,14 +39,25 @@
     width: 40px;
     height: 40px;
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .postBoxImage {
     border-radius: 10px;
     height: 360px;
     width: 360px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.postBoxAbout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    width: 360px;
+    background-color: #f0ebe2;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin-top: 5px;
 }
 .postBoxDescription{
     font-size: 13px;
@@ -54,4 +65,8 @@
 }
 .postLike {
     height: 25px;
+    filter: drop-shadow(0 0 1px #1B1713);
+}
+.postBoxAbout button{
+    border: none;
 }

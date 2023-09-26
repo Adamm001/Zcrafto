@@ -14,38 +14,44 @@
   margin: 3px;
   width: 360px;
   height: 568px;
-  background-color: #68573C;
+  background-color: #fff;
   padding: 20px 15px;
   display: flex;
   flex-direction: column;
   gap: 15px;
   border-radius: 10px;
+  border: 3px solid #644C3C;
 }
 
 .friendList a {
-  background-color: #D1B18D;
+  background-color: #644C3C;
   border-radius: 5px;
   height: 50px;
   display: flex;
   align-items: center;
-  padding-left: 15px;
+  padding-left: 10px;
+  gap: 10px;
   font-weight: 600;
   font-family: 'Nunito', sans-serif;
   text-decoration: none;
   box-shadow: 10px 10px 3px rgba(0, 0, 0, 0.3);
-  color: #1f1814;
+  color: #fff;
   transition: 0.3s;
 }
 
 .friendList a.active {
   background-color: #1f1814;
-  color: #fff;
+  color: #FDCF78;
 }
 
 .friendList a:active {
   transform: translateY(5px);
+  box-shadow: 10px 5px 3px rgba(0, 0, 0, 0.3);
 }
-
+.friendList img{
+  width: 36px;
+  border-radius: 18px;
+}
 /* Message */
 .messenger-container {
   width: 800px;

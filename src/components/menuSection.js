@@ -5,9 +5,9 @@ import videoLogo from "C:/Users/moko/OneDrive - mk.edu.mn/Documents/Procon/Zcraf
 import chatLogo from "C:/Users/moko/OneDrive - mk.edu.mn/Documents/Procon/Zcrafto/src/icons/chat_icon.svg";
 import { NavLink } from "react-router-dom";
 export default function Menusection() {
-  const menuList = ["Home", "video", "shop", "profile", "messenger"];
+  const menuList = ["Home", "Video", "Shop", "profile", "Chat"];
   const menuIcon = [menuLogo, videoLogo, shopLogo, proLogo, chatLogo];
-  const toLink = ['/','/category/video','/category/shop','/profile','/chat/0']
+  const toLink = ['/','/category/video','/category/shop','/profile/post','/chat/0']
   return (
     <div className="menuSection">
       {menuList.map((menuName, index) => (
