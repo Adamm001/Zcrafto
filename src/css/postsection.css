@@ -1,3 +1,8 @@
+* {
+
+    font-family: 'Nunito', sans-serif;
+}
+
 .postSection {
     z-index: 0;
     padding: 10px;
@@ -22,11 +27,13 @@
     justify-content: space-between;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) inset;
 }
-.postBoxName{
+
+.postBoxName {
     font-weight: bold;
     font-size: 18px;
     font-family: 'Nunito', sans-serif;
 }
+
 .postBoxProName {
     width: 100%;
     display: flex;
@@ -48,7 +55,8 @@
     width: 360px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
-.postBoxAbout{
+
+.postBoxAbout {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,14 +67,97 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     margin-top: 5px;
 }
-.postBoxDescription{
+
+.postBoxDescription {
     font-size: 13px;
     font-family: 'Nunito', sans-serif;
 }
+
 .postLike {
     height: 25px;
     filter: drop-shadow(0 0 1px #1B1713);
 }
-.postBoxAbout button{
+
+.postBoxAbout button {
     border: none;
+}
+
+.newPost {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) inset;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+    padding: 15px;
+    background-color: #e1d7c4;
+    border-radius: 10px;
+}
+
+.newPostInput {
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    padding-left: 15px;
+    background-color: #fffde7;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.newPostBox {
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+    border-radius: 10px;
+    background-color: #fffde7;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.newPostBox::-webkit-scrollbar {
+    height: 5px;
+}
+
+.newPostBox::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+.newPostBox::-webkit-scrollbar-thumb {
+    background: #1b1713;
+    border-radius: 10px;
+}
+
+
+.newPostCatBtn {
+    display: flex;
+    align-items: center;
+    padding: 3px 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #644c3c;
+    color: #fff;
+    font-weight: bold;
+}
+
+.newPostUploadBtn {
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background-color: #644c3c;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+.newPostUploadBtn:hover , .newPostPostBtn:hover, .newPostCatBtn:hover{
+    background-color: #1B1713;
+    color: #fff;
+    
+}
+.newPostPostBtn {
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.newPostUploadBtn:active , .newPostPostBtn:active, .newPostCatBtn:active{
+    transform: translateY(2px);    
 }

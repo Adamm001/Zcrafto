@@ -2,6 +2,7 @@ import "C:/Users/moko/OneDrive - mk.edu.mn/Documents/Procon/Zcrafto/src/css/shop
 import shopImage from "C:/Users/moko/OneDrive - mk.edu.mn/Documents/Procon/Zcrafto/src/icons/Discord - A New Way to Chat with Friends & Communities.jpeg";
 
 const Shop = () => {
+  
   return (
     <div className="shopBox">
       <img src={shopImage} className="shopBoxImage" />
