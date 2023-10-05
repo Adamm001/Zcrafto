@@ -17,13 +17,30 @@ import Message4 from "./components/message/message4";
 import VideoCategory from "./components/videoCategory";
 import PostCategory from "./components/postCategory";
 import ShopCategory from "./components/shopCategory";
+import Login from "./components/login";
+import SignUp from "./components/signup";
+import db from "./config/firebase"
+import { useEffect, useState } from "react";
+import { collection, onSnapshot } from "firebase/firestore";
 
 function App() {
+  const [users, setUsers] = useState([]);
+  console.log(users)
+  useEffect(
+    () =>
+    onSnapshot(collection(db, "user"),(snapshot) => 
+      setUsers(snapshot.docs.map((doc) => doc.data()))
+      ), 
+    []
+  );
+
   return (
     <div className="body">
       <Navbar/>
       <Menusection/>
       <Routes>
+        <Route path="Login" element={<Login users={users}/>}/>
+        <Route path="SignUp" element={<SignUp/>} />
         <Route path="category" element={<Category />}></Route>
         <Route path="/" element={<PostSection />}></Route>
         <Route path="category" element={<Category />}>
