@@ -19,27 +19,22 @@ import PostCategory from "./components/postCategory";
 import ShopCategory from "./components/shopCategory";
 import Login from "./components/login";
 import SignUp from "./components/signup";
-import db from "./config/firebase"
-import { useEffect, useState } from "react";
-import { collection, onSnapshot } from "firebase/firestore";
+import LwPostCategory from "./components/LwTseku/LwPostCategory";
+import LwVideoCategory from "./components/LwTseku/LwVideoCategory";
+import LwShopCategory from "./components/LwTseku/LwshopCategory";
+import Profile1 from "./components/Khsblg/profile1";
+import Profile0 from "./components/LwTseku/profile0";
+import KhPostCategory from "./components/Khsblg/KhPostCategory";
+import KhVideoCategory from "./components/Khsblg/KhVideoCategory";
+import KhShopCategory from "./components/Khsblg/KhshopCategory";
 
 function App() {
-  const [users, setUsers] = useState([]);
-  console.log(users)
-  useEffect(
-    () =>
-    onSnapshot(collection(db, "user"),(snapshot) => 
-      setUsers(snapshot.docs.map((doc) => doc.data()))
-      ), 
-    []
-  );
-
   return (
     <div className="body">
       <Navbar/>
       <Menusection/>
       <Routes>
-        <Route path="Login" element={<Login users={users}/>}/>
+        <Route path="Login" element={<Login/>}/>
         <Route path="SignUp" element={<SignUp/>} />
         <Route path="category" element={<Category />}></Route>
         <Route path="/" element={<PostSection />}></Route>
@@ -47,10 +42,20 @@ function App() {
           <Route path="video" element={<VideoSection />}></Route>
           <Route path="shop" element={<ShopSection />}></Route>
         </Route>
-        <Route path="profile" element={<Profile />}>
+        <Route path="profile" element={<Profile/>}>
           <Route path="post" element={<PostCategory/>}/>
           <Route path="video" element={<VideoCategory/>}/>
           <Route path="shop" element={<ShopCategory/>}/>
+        </Route>
+        <Route path="profile0" element={<Profile0/>}>
+          <Route path="post0" element={<LwPostCategory/>}/>
+          <Route path="video0" element={<LwVideoCategory/>}/>
+          <Route path="shop0" element={<LwShopCategory/>}/>
+        </Route>
+        <Route path="profile1" element={<Profile1/>}>
+          <Route path="post1" element={<KhPostCategory/>}/>
+          <Route path="video1" element={<KhVideoCategory/>}/>
+          <Route path="shop1" element={<KhShopCategory/>}/>
         </Route>
         <Route path="chat" element={<FriendsList />}>
           <Route path="0" element={<Message/>} />

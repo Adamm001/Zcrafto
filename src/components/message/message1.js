@@ -3,23 +3,23 @@ import React, { useState } from "react";
 import "C:/Users/moko/OneDrive - mk.edu.mn/Documents/Procon/Zcrafto/src/css/message.css";
 import FriendsList from "../friendNames";
 import { Outlet } from "react-router-dom";
+import { Khsblg } from "../../js/messegeData";
 
 export default function Message1() {
-  const [messages, setMessages] = useState([{text:'hi',sender:'user'},{text:'hi',sender:'other'},{text:'like',sender:'user'},{text:'like',sender:'other'}]);
   const [newMessage, setNewMessage] = useState("");
 
   const handleSendMessage = () => {
     if (newMessage.trim() === "") return;
 
-    const updatedMessages = [...messages, { text: newMessage, sender: "user" }];
-    setMessages(updatedMessages);
+    const updatedMessages = { text: newMessage, sender: "user" };
+    Khsblg.push(updatedMessages);
     setNewMessage("");
   };
 
   return (
     <div className="messenger-container">
       <div className="message-list">
-        {messages.map((message, index) => (
+        {Khsblg.map((message, index) => (
           <div
             key={index}
             className={`message ${

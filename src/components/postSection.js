@@ -1,7 +1,11 @@
 import Post from "./post";
 import "C:/Users/moko/OneDrive - mk.edu.mn/Documents/Procon/Zcrafto/src/css/postsection.css";
+import { useState } from "react";
+import { ProfileData } from "../js/postData";
+
 
 const NewPost = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
   const category = [
     "Wood craving",
     "Beads",
@@ -13,6 +17,15 @@ const NewPost = () => {
     "Origami",
     "Painting",
   ];
+  const handleImageChange = (e) => {
+      const file = e.target.files[0];
+      setSelectedImage(file);
+  };
+
+  const handleUpload = () => {
+      console.log('Selected Image:', selectedImage);
+  };
+
   return (
     <div className="newPost">
       <input
@@ -26,8 +39,8 @@ const NewPost = () => {
           <button className="newPostCatBtn">{heseg}</button>
         ))}
       </div>
-      <button className="newPostUploadBtn">Image Upload</button>
-      <button className="newPostPostBtn">Post</button>
+      <input type="file" accept="image/*"  onChange={handleImageChange} />
+      <button onClick={handleUpload} className="newPostPostBtn">Upload</button>
     </div>
   );
 };
@@ -35,11 +48,11 @@ const NewPost = () => {
 const PostSection = () => {
   return (
     <div className="postSection">
-      <NewPost />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
+      {
+        ProfileData.map((data, index)=>(
+          <Post data={data} />
+        ))
+      }
     </div>
   );
 };

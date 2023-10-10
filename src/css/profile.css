@@ -124,7 +124,7 @@
 .profileVideo{
   transform: translate(610px, 58px);
   width: 735px;
-  height: auto;
+  min-height: 575px;
   display: flex;
   padding: 30px;
   justify-content: space-between;
@@ -142,6 +142,6 @@
 }
 .profileVideo img:hover{
   transform: scale(1.1);
-  filter: brightness(0.5) saturate(0.3) contrast(1.05) blur(5px);
+  filter: brightness(0.5) saturate(0.3) contrast(1.05);
   box-shadow: none;
 }

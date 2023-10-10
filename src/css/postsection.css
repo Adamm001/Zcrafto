@@ -161,3 +161,6 @@
 .newPostUploadBtn:active , .newPostPostBtn:active, .newPostCatBtn:active{
     transform: translateY(2px);    
 }
+.likeButton{
+    cursor: pointer;
+}

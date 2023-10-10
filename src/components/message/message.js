@@ -1,28 +1,23 @@
 // InstagramMessenger.js
 import React, { useState } from "react";
 import "C:/Users/moko/OneDrive - mk.edu.mn/Documents/Procon/Zcrafto/src/css/message.css";
+import { LwTseku } from "../../js/messegeData";
 
 export default function Message() {
-  const [messages, setMessages] = useState([
-    { text: "hi", sender: "user" },
-    { text: "hi", sender: "other" },
-    { text: "like", sender: "user" },
-    { text: "like", sender: "other" },
-  ]);
   const [newMessage, setNewMessage] = useState("");
 
   const handleSendMessage = () => {
     if (newMessage.trim() === "") return;
 
-    const updatedMessages = [...messages, { text: newMessage, sender: "user" }];
-    setMessages(updatedMessages);
+    const updatedMessages = { text: newMessage, sender: "user" };
+    LwTseku.push(updatedMessages);
     setNewMessage("");
   };
 
   return (
     <div className="messenger-container">
       <div className="message-list">
-        {messages.map((message, index) => (
+        {LwTseku.map((message, index) => (
           <div
             key={index}
             className={`message ${
