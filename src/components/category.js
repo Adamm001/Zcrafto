@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-const Category = () => {
+const Category = ({setPlaCategory}) => {
     const category = [
       "Wood craving",
       "Beads",
@@ -12,11 +12,14 @@ const Category = () => {
       "Origami",
       "Painting",
     ];
+    const ChangeCat = (name) => {
+      setPlaCategory(name)
+    }
     return (
       <>
       <div className="categorySection">
         {category.map((name) => (
-          <button className="categoryButton">{name}</button>
+          <button onClick={() => ChangeCat(name)} className="categoryButton">{name}</button>
         ))}
       </div>
       <Outlet/>

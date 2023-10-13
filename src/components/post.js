@@ -1,12 +1,15 @@
 import heartIcon from "C:/Users/moko/OneDrive - mk.edu.mn/Documents/Procon/Zcrafto/src/icons/like_Icon.svg";
 import fillHeart from "../icons/fillHeart.png"
 import { useState } from "react";
+import { Button } from "antd";
 const ProName = ({userImg, userName}) => {
+  const proLink = userName === "LwTseku" ? "http://localhost:3000/profile0/post0" : "http://localhost:3000/profile1/post1"
   return (
-    <div className="postBoxProName">
+    
+    <Button key="link" href={proLink} className="postBoxProName">
         <img src={userImg} alt="Pro Image" className="postBoxPro" />
       <span className="postBoxName">{userName}</span>
-    </div>
+    </Button>
   );
 };
 const Post = ({data}) => {

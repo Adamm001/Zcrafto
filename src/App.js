@@ -1,4 +1,4 @@
-import { Outlet, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Category from "./components/category";
 import Menusection from "./components/menuSection";
@@ -27,8 +27,11 @@ import Profile0 from "./components/LwTseku/profile0";
 import KhPostCategory from "./components/Khsblg/KhPostCategory";
 import KhVideoCategory from "./components/Khsblg/KhVideoCategory";
 import KhShopCategory from "./components/Khsblg/KhshopCategory";
+import { useState } from "react";
 
 function App() {
+  const [plaCategory, setPlaCategory] = useState("Wood craving");
+  console.log(plaCategory)
   return (
     <div className="body">
       <Navbar/>
@@ -38,9 +41,9 @@ function App() {
         <Route path="SignUp" element={<SignUp/>} />
         <Route path="category" element={<Category />}></Route>
         <Route path="/" element={<PostSection />}></Route>
-        <Route path="category" element={<Category />}>
-          <Route path="video" element={<VideoSection />}></Route>
-          <Route path="shop" element={<ShopSection />}></Route>
+        <Route path="category" element={<Category setPlaCategory={setPlaCategory} />}>
+          <Route path="video" element={<VideoSection plaCategory={plaCategory} />}></Route>
+          <Route path="shop" element={<ShopSection plaCategory={plaCategory} />}></Route>
         </Route>
         <Route path="profile" element={<Profile/>}>
           <Route path="post" element={<PostCategory/>}/>

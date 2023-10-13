@@ -285,3 +285,15 @@ body {
   align-items: center;
   margin-bottom: 10px;
 }
+.profileBtn{
+  background: none;
+  border: none;
+  height: auto;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  display: flex;
+  width: auto;
+  cursor: pointer;
+}

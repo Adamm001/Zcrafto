@@ -56,12 +56,12 @@ const ShopButton = ({data}) => {
 };
 
 const Shop = ({data}) => {
-
+  const proLink = data.profile.useName === "LwTseku" ? "http://localhost:3000/profile0/post0" : "http://localhost:3000/profile1/post1"
   return (
     <div className="shopBox">
       <img src={data.shopImg} className="shopBoxImage"/>
       <div className="shopBoxAbout">
-        <img src={data.profile.proPic} className="shopBoxPro" />
+        <Button key="link" href={proLink} className="profileBtn" > <img src={data.profile.proPic} className="shopBoxPro" /></Button>
         <div className="shopBoxText">
           <p className="shopBoxName">{data.title}</p>
           <p className="shopBoxPrice">
@@ -75,11 +75,10 @@ const Shop = ({data}) => {
 };
 
 const ShopSection = () => {
-  
   return (
     <div className="shopSection">
       {
-        Shopdata.map((data, index) =>(
+        Shopdata.map((data, index) =>(  
           <Shop data={data} />
         ))
       }
