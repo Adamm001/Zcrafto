@@ -5,7 +5,6 @@ import { ProfileData } from "../js/postData";
 
 
 const NewPost = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
   const category = [
     "Wood craving",
     "Beads",
@@ -17,18 +16,25 @@ const NewPost = () => {
     "Origami",
     "Painting",
   ];
-  const handleImageChange = (e) => {
-      const file = e.target.files[0];
-      setSelectedImage(file);
-  };
-
-  const handleUpload = () => {
-      console.log('Selected Image:', selectedImage);
-  };
-
+  const [text, setText] = useState("");
+  const [link, setLink] = useState("");
+  const PostBtn = () =>{
+    if (link.trim() === "") return;
+    
+    const updatedText = {profile:{useName:'user', proPic:'https://icons-for-free.com/iconfiles/png/512/instagram+profile+user+icon-1320184028326496024.png'},
+    postImg:link,
+    description:text,
+    like:false};
+    ProfileData.push(updatedText)
+    setLink("")
+    setText("")
+    console.log(link, text)
+  }
   return (
     <div className="newPost">
       <input
+        value={text}
+        onChange={(e) => setText(e.target.value)}
         type="text"
         name="descrition"
         placeholder="Text..."
@@ -39,8 +45,15 @@ const NewPost = () => {
           <button className="newPostCatBtn">{heseg}</button>
         ))}
       </div>
-      <input type="file" accept="image/*"  onChange={handleImageChange} />
-      <button onClick={handleUpload} className="newPostPostBtn">Upload</button>
+      <input
+        value={link}
+        onChange={(e) => setLink(e.target.value)}
+        type="text"
+        name="Link"
+        placeholder="Image link.."
+        className="newPostInput"
+      />
+      <button className="newPostPostBtn" onClick={PostBtn}>Upload</button>
     </div>
   );
 };
@@ -48,6 +61,7 @@ const NewPost = () => {
 const PostSection = () => {
   return (
     <div className="postSection">
+      <NewPost/>
       {
         ProfileData.map((data, index)=>(
           <Post data={data} />

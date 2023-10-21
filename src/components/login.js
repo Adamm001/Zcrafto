@@ -27,7 +27,7 @@ const Login = ({users}) => {
             <p>Remember me</p>
           </div>
           
-          <button>Sign in</button>
+          <button>Login </button>
           <div className="forgot">
             <p>i don't have an account</p> <p>forgot password</p>
           </div>

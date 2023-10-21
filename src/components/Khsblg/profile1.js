@@ -12,7 +12,7 @@ function Profile1() {
         <div className="profile-container">
           <div className="profile-header">
             <img
-              src={"https://scontent.fuln3-1.fna.fbcdn.net/v/t39.30808-6/293782713_148126191145657_2453976179917815331_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=1b51e3&_nc_ohc=LxylOsVdl0MAX-9bvVx&_nc_ht=scontent.fuln3-1.fna&oh=00_AfCZKCItsQBSf7NzJRQLDg56qxI3OdjyBaHEU9B7l4bjpw&oe=6528DCDE"} // Replace with your profile picture URL
+              src={"https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/293782713_148126191145657_2453976179917815331_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=rchnkpxoJ6sAX_497Mx&_nc_ht=scontent-nrt1-1.xx&oh=00_AfBr_pmouHLTbhvQDscCJqEIfTwO571jqbhC8uw4qXt2MQ&oe=652ECB9E"} // Replace with your profile picture URL
               alt="Profile"
               className="profile-picture"
             />
